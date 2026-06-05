@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MPC. Lucero Fabila — Psicología Clínica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="cursor" id="cur"></div>
+  <div class="cursor-ring" id="ring"></div>
+
+  <!-- NAV -->
+  <nav>
+    <button class="nav-logo" onclick="go('home')">Lucero <span>Fabila</span></button>
+    <ul class="nav-links">
+      <li><button onclick="go('home')"     data-p="home">Inicio</button></li>
+      <li><button onclick="go('acerca')"   data-p="acerca">Acerca de mí</button></li>
+      <li><button onclick="go('contacto')" data-p="contacto">Contacto</button></li>
+    </ul>
+    <button class="hamburger" id="hbtn" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile overlay -->
+  <div class="mobile-menu" id="mmenu">
+    <button onclick="go('home');cm()">Inicio</button>
+    <button onclick="go('acerca');cm()">Acerca de mí</button>
+    <button onclick="go('contacto');cm()">Contacto</button>
+  </div>
+
+  <div id="app">
+
+    <!-- HOME -->
+    <div class="page active" id="page-home">
+      <div class="home-grid">
+        <div>
+          <div class="hero-eyebrow fi go d1">Psicología Clínica</div>
+          <h1 class="hero-title fi go d2">
+            Construir una vida<br/>que se sienta<br/><em>valiosa</em> es posible.
+          </h1>
+          <p class="hero-tag fi go d3">
+            Terapia psicológica basada en evidencia desde una mirada humana, respetuosa y comprometida con tu proceso.
+          </p>
+          <div class="fi go d4">
+            <button class="btn-p" onclick="go('contacto')">Agendar consulta</button>
+          </div>
+        </div>
+        <div class="hero-card fi go d3">
+          <div class="hero-card-border"></div>
+          <div class="hero-card-inner">
+            <p class="card-quote">"El viaje más importante es el que hacemos hacia nuestro interior."</p>
+            <div class="card-line"></div>
+            <span class="card-author">— Carl Gustav Jung</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACERCA -->
+    <div class="page" id="page-acerca">
+      <div class="si">
+        <div class="about-grid">
+          <div class="about-img fi">
+            <div class="about-monogram">LF</div>
+          </div>
+          <div class="about-text">
+            <div class="eyebrow fi">Acerca de mí</div>
+            <h2 class="stitle fi d1">MPC. Lucero<br/><em>Fabila</em></h2>
+            <p class="sbody fi d2">
+              Soy psicóloga clínica con enfoque en terapias basadas en evidencia, como la Terapia Cognitivo Conductual (TCC), la Terapia Racional Emotiva Conductual (TREC) y la Terapia Dialéctico Conductual (DBT).
+            </p>
+            <p class="sbody fi d3">
+              Cuento con formación en psicología de la salud y experiencia en investigación sobre desregulación emocional y trastornos de personalidad.
+            </p>
+            <p class="sbody fi d3">
+              Mi práctica integra herramientas orientadas a la regulación emocional, el bienestar psicológico y el desarrollo de estrategias para afrontar las dificultades de la vida cotidiana desde un espacio cálido, seguro y profesional.
+            </p>
+            <div class="pills fi d4">
+              <span class="pill">TCC</span>
+              <span class="pill">TREC</span>
+              <span class="pill">DBT</span>
+              <span class="pill">Regulación emocional</span>
+              <span class="pill">Psicología de la salud</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACTO -->
+    <div class="page" id="page-contacto">
+      <div class="si">
+        <div class="eyebrow fi">Hablemos</div>
+        <h2 class="stitle fi d1">Contacto</h2>
+        <p class="sbody fi d2">Si quieres agendar una consulta o tienes alguna pregunta, escríbeme. Con gusto te atiendo.</p>
+
+        <div class="ct-cols fi d3">
+          <div>
+            <div class="ct-item">
+              <div class="ct-icon">✉</div>
+              <div>
+                <div class="ct-label">Correo electrónico</div>
+                <div class="ct-val">
+                  <a href="mailto:psic.lucerofabila@gmail.com">psic.lucerofabila@gmail.com</a>
+                </div>
+              </div>
+            </div>
+            <div class="ct-item">
+              <div class="ct-icon">☎</div>
+              <div>
+                <div class="ct-label">WhatsApp / Teléfono</div>
+                <div class="ct-val">
+                  <a href="https://wa.me/528444038277" target="_blank">844 403 8277</a>
+                </div>
+              </div>
+            </div>
+            <div class="ct-item">
+              <div class="ct-icon">◎</div>
+              <div>
+                <div class="ct-label">Modalidad</div>
+                <div class="ct-val">Presencial · En línea</div>
+              </div>
+            </div>
+            <div class="ct-item">
+              <div class="ct-icon">◷</div>
+              <div>
+                <div class="ct-label">Horario de atención</div>
+                <div class="ct-val">Lun–Vie · 9:00–19:00</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ct-cta">
+            <p class="ct-cta-title">¿Lista para dar el primer paso?</p>
+            <p class="ct-cta-body">
+              Puedes contactarme directamente por correo o WhatsApp. Respondo en menos de 24 horas en días hábiles.
+            </p>
+            <div class="ct-cta-btns">
+              <a class="btn-ct" href="mailto:psic.lucerofabila@gmail.com">
+                <div class="btn-ct-icon">✉</div>
+                psic.lucerofabila@gmail.com
+              </a>
+              <a class="btn-ct" href="https://wa.me/528444038277" target="_blank">
+                <div class="btn-ct-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
+                  </svg>
+                </div>
+                844 403 8277
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="f-logo">MPC. Lucero Fabila — Psicóloga Clínica</div>
+        <div class="f-copy">© 2026 · Todos los derechos reservados</div>
+      </footer>
+    </div>
+
+  </div><!-- #app -->
+
+  <script src="script.js"></script>
+</body>
+</html>
